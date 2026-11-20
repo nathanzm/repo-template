@@ -13,6 +13,6 @@ permissions:
 
 jobs:
   baseline:
-    uses: nathanzm/.github/.github/workflows/baseline.yml@c0ad97923ddd2fcb750865602de3f50c6dfa6656 # v1.0.0
+    uses: nathanzm/.github/.github/workflows/baseline.yml@05f8ae06dbc2c29ad433e93ab78e6016455f68cb # v1.0.1
   python:
-    uses: nathanzm/.github/.github/workflows/python.yml@c0ad97923ddd2fcb750865602de3f50c6dfa6656 # v1.0.0
+    uses: nathanzm/.github/.github/workflows/python.yml@05f8ae06dbc2c29ad433e93ab78e6016455f68cb # v1.0.1
