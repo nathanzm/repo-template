@@ -12,8 +12,7 @@ permissions:
   contents: read
 
 jobs:
-  # TODO: replace @main with the v1.0.0 commit SHA once nathanzm/.github is published.
   baseline:
-    uses: nathanzm/.github/.github/workflows/baseline.yml@main
+    uses: nathanzm/.github/.github/workflows/baseline.yml@c0ad97923ddd2fcb750865602de3f50c6dfa6656 # v1.0.0
   python:
-    uses: nathanzm/.github/.github/workflows/python.yml@main
+    uses: nathanzm/.github/.github/workflows/python.yml@c0ad97923ddd2fcb750865602de3f50c6dfa6656 # v1.0.0
