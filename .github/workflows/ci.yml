@@ -1,0 +1,19 @@
+# CI: the required checks for main (baseline gates plus the Python toolchain).
+# Reusable workflows come from nathanzm/.github, pinned by commit SHA.
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  # TODO: replace @main with the v1.0.0 commit SHA once nathanzm/.github is published.
+  baseline:
+    uses: nathanzm/.github/.github/workflows/baseline.yml@main
+  python:
+    uses: nathanzm/.github/.github/workflows/python.yml@main
