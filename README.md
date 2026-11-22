@@ -24,4 +24,4 @@ Report vulnerabilities privately through this repository's **Security** tab → 
 
 ## License
 
-[MIT](LICENSE).
+[MIT](LICENSE)
