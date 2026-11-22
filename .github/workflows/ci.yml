@@ -1,5 +1,5 @@
 # CI: the required checks for main (baseline gates plus the Python toolchain).
-# Reusable workflows come from nathanzm/.github, pinned by commit SHA.
+# Shared workflows come from nathanzm/.github at @main; that repo holds the pins.
 name: ci
 
 on:
@@ -13,6 +13,6 @@ permissions:
 
 jobs:
   baseline:
-    uses: nathanzm/.github/.github/workflows/baseline.yml@05f8ae06dbc2c29ad433e93ab78e6016455f68cb # v1.0.1
+    uses: nathanzm/.github/.github/workflows/baseline.yml@main
   python:
-    uses: nathanzm/.github/.github/workflows/python.yml@05f8ae06dbc2c29ad433e93ab78e6016455f68cb # v1.0.1
+    uses: nathanzm/.github/.github/workflows/python.yml@main

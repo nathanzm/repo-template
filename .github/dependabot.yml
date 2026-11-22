@@ -1,13 +1,8 @@
-# Dependabot: keep pinned actions, reusable workflows and Python dev tools
-# current; wait 7 days after a release to skip short-lived malicious versions.
+# Dependabot: keep the Python dev tools current; wait 7 days after a release
+# to skip short-lived malicious versions. Workflows pin nothing here: the
+# shared workflows they call hold the pins.
 version: 2
 updates:
-  - package-ecosystem: github-actions
-    directory: /
-    schedule:
-      interval: weekly
-    cooldown:
-      default-days: 7
   - package-ecosystem: pip
     directory: /
     schedule:
