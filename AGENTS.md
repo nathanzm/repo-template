@@ -27,7 +27,7 @@ pytest --cov --cov-branch --cov-report=term-missing --cov-fail-under=100
 - Code style: idiomatic Python (PEP 8 via ruff); every function and class has a docstring; diagnostics go through `logging`, never `print`. Text files use LF line endings.
 
 ## CI (required to merge)
-`.github/workflows/ci.yml` calls the shared workflows in `nathanzm/.github`: a gitleaks secret scan, the vendor-file ban, dependency review (on public PRs), and the Python checks above. They're pinned by commit SHA; Dependabot keeps the pins and `requirements-dev.txt` current.
+`.github/workflows/ci.yml` calls the shared workflows in `nathanzm/.github`: a gitleaks secret scan, the vendor-file ban, dependency review (on public PRs), and the Python checks above. They run at `@main`, so this repo pins no actions; Dependabot keeps `requirements-dev.txt` current.
 
 ## Contributing
 - Branch from `main` and open a PR. PRs are squash-merged, and the branch is deleted on merge.
