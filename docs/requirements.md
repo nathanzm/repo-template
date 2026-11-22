@@ -1,10 +1,26 @@
 # Requirements
 
-Each requirement is one testable statement with a stable ID. Never reuse an ID; mark dropped requirements "Removed" instead of deleting them.
+Keywords: **SHALL** (mandatory), **SHALL NOT** (prohibited), **SHOULD** / **SHOULD NOT** (recommended / discouraged), and **MAY** (optional), as in RFC 2119 and RFC 8174. They're normative only in uppercase; text without one is context, not a requirement.
 
-| ID | Requirement | Type |
+Each row holds one requirement with one keyword, so it can be tested on its own. IDs are permanent: never reuse or renumber them, and mark a dropped requirement "Removed" instead of deleting its row.
+
+## 1. Scope
+- **Purpose:** what the project is for, in one or two sentences.
+- **Users:** who uses it, and in which roles.
+- **Out of scope:** what it deliberately doesn't do.
+
+## 2. Functional requirements
+
+### 2.1 Greeting
+*As a caller, I want a greeting for a name, so I can show it to a user.*
+
+| ID | Requirement | Notes |
 |---|---|---|
-| REQ-001 | Greeting a non-blank name returns `Hello, <name>!` with surrounding whitespace trimmed. | Functional |
-| REQ-002 | A blank or whitespace-only name is rejected with an error. | Security (input validation) |
+| REQ-001 | `greet` SHALL return `Hello, <name>!` for a non-blank name, with surrounding whitespace trimmed. | |
 
-Types: Functional, Security, Privacy, Performance, Operational.
+## 3. Non-functional requirements
+
+### 3.1 Security
+| ID | Requirement | Notes |
+|---|---|---|
+| REQ-002 | `greet` SHALL reject a blank or whitespace-only name with an error. | Input validation at the public API |

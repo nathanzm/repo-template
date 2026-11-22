@@ -4,11 +4,11 @@ Guidance for anyone, human or AI, working in this repository. It's the only AI g
 
 ## Start here
 - [README.md](README.md): what it is and how users run it.
-- [docs/requirements.md](docs/requirements.md): what it must do (`REQ-` IDs).
+- [docs/requirements.md](docs/requirements.md): what it must do, as SHALL/SHOULD/MAY requirements with permanent `REQ-` IDs, one per row, grouped by section.
 - [docs/architecture.md](docs/architecture.md): how it's built, trust boundaries, threat model.
 - [docs/test-plan.md](docs/test-plan.md): how each requirement is tested.
 
-Keep these current in the same change as the code. Write them in the present tense, short, with no history narration.
+Keep these current in the same change as the code. Write them in the present tense, short, with no history narration. Keep their fixed sections; leave one out only when it has nothing to say.
 
 ## Principles
 - **Security first, then privacy.** Validate all input at trust boundaries, use least privilege, no secrets in the repo, and keep dependencies to a minimum. If a change would weaken security or privacy, stop and raise it.

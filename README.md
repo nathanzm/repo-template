@@ -20,7 +20,7 @@ One or two sentences: what this does and who it's for.
 
 ## Security
 
-Report vulnerabilities privately; see [SECURITY.md](https://github.com/nathanzm/.github/blob/main/SECURITY.md).
+Report vulnerabilities privately through this repository's **Security** tab → **Report a vulnerability**.
 
 ## License
 
