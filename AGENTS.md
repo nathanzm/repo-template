@@ -17,17 +17,15 @@ Keep these current in the same change as the code. Write them in the present ten
 
 ## Develop
 ```sh
-python3 -m venv .venv && . .venv/bin/activate
-pip install -r requirements-dev.txt
-ruff format && ruff check && mypy
-pytest --cov --cov-branch --cov-report=term-missing --cov-fail-under=100
+# TODO: the commands to set up, format, lint, type check and test,
+# exactly as CI runs them.
 ```
-- Layout: code in `src/<package>/`, tests in `tests/`. Mark tests that use real external dependencies with `@pytest.mark.integration`.
-- **Coverage is 100% line and branch.** Exclude a line only with an inline reason (`# pragma: no cover - <why>`). Never lower the floor.
-- Code style: idiomatic Python (PEP 8 via ruff); every function and class has a docstring; diagnostics go through `logging`, never `print`. Text files use LF line endings.
+- Layout: TODO: where code and tests live. Tests that use real external dependencies are marked as integration tests.
+- **Coverage is 100% line and branch.** Exclude a line only with an inline comment giving the reason. Never lower the floor.
+- Code style: the language's idiomatic style, enforced by its formatter and linter with warnings as errors; every function and type has a doc comment; diagnostics go through the language's standard logger, never bare prints. Text files use LF line endings.
 
 ## CI (required to merge)
-`.github/workflows/ci.yml` calls the shared workflows in `nathanzm/.github`: a gitleaks secret scan, the vendor-file ban, dependency review (on public PRs), and the Python checks above. They run at `@main`, so this repo pins no actions; Dependabot keeps `requirements-dev.txt` current.
+`.github/workflows/ci.yml` calls the shared workflows in `nathanzm/.github`: a gitleaks secret scan, the vendor-file ban, dependency review (on public PRs), and one job per language running the checks above. They run at `@main`, so this repo pins no actions. A repo with pinned dependencies adds `.github/dependabot.yml` for its package ecosystem, with a 7-day cooldown.
 
 ## Contributing
 - Branch from `main` and open a PR. PRs are squash-merged, and the branch is deleted on merge.

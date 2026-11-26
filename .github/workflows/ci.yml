@@ -1,4 +1,7 @@
-# CI: the required checks for main (baseline gates plus the Python toolchain).
+# CI: the required checks for main. The baseline gates run in every repo; add
+# one job per language from nathanzm/.github (see its README), for example:
+#   python:
+#     uses: nathanzm/.github/.github/workflows/python.yml@main
 # Shared workflows come from nathanzm/.github at @main; that repo holds the pins.
 name: ci
 
@@ -14,5 +17,3 @@ permissions:
 jobs:
   baseline:
     uses: nathanzm/.github/.github/workflows/baseline.yml@main
-  python:
-    uses: nathanzm/.github/.github/workflows/python.yml@main

@@ -9,16 +9,4 @@ GEMINI.md
 .windsurfrules
 .clinerules
 
-# Python
-__pycache__/
-*.py[cod]
-.venv/
-build/
-dist/
-*.egg-info/
-.coverage
-.coverage.*
-htmlcov/
-.mypy_cache/
-.pytest_cache/
-.ruff_cache/
+# Add the language's build, cache and coverage outputs below.

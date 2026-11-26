@@ -11,12 +11,12 @@ Each row holds one requirement with one keyword, so it can be tested on its own.
 
 ## 2. Functional requirements
 
-### 2.1 Greeting
-*As a caller, I want a greeting for a name, so I can show it to a user.*
+### 2.1 Feature area
+*As a <role>, I want <capability>, so that <benefit>.*
 
 | ID | Requirement | Notes |
 |---|---|---|
-| REQ-001 | `greet` SHALL return `Hello, <name>!` for a non-blank name, with surrounding whitespace trimmed. | |
+| REQ-001 | The system SHALL <observable behavior>. | |
 
 ## 3. Non-functional requirements
 Every subsection below is always present. One with nothing to require says "None." and why.
@@ -24,22 +24,22 @@ Every subsection below is always present. One with nothing to require says "None
 ### 3.1 Security
 | ID | Requirement | Notes |
 |---|---|---|
-| REQ-002 | `greet` SHALL reject a blank or whitespace-only name with an error. | Input validation at the public API |
+| REQ-002 | The system SHALL reject <invalid input> at <trust boundary> with an error. | Input validation |
 
 ### 3.2 Privacy
-None. `greet` stores and sends nothing; the name only passes through.
+None. <Why: for example, it stores and sends no personal data.>
 
 ### 3.3 Logging
-None. The example doesn't log.
+None. <Why.>
 
 ### 3.4 Reliability
-None. `greet` has no state or data to protect.
+None. <Why.>
 
 ### 3.5 Performance
-None. Inputs are single names.
+None. <Why.>
 
 ### 3.6 Compatibility
-None beyond the Python version in `pyproject.toml`.
+None. <Why.>
 
 ### 3.7 Operations
-None. It's a library with no install steps of its own.
+None. <Why.>
