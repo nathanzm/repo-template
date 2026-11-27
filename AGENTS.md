@@ -25,7 +25,7 @@ Keep these current in the same change as the code. Write them in the present ten
 - Code style: the language's idiomatic style, enforced by its formatter and linter with warnings as errors; every function and type has a doc comment; diagnostics go through the language's standard logger, never bare prints. Text files use LF line endings.
 
 ## CI (required to merge)
-`.github/workflows/ci.yml` calls the shared workflows in `nathanzm/.github`: a gitleaks secret scan, the vendor-file ban, dependency review (on public PRs), and one job per language running the checks above. They run at `@main`, so this repo pins no actions. A repo with pinned dependencies adds `.github/dependabot.yml` for its package ecosystem, with a 7-day cooldown.
+`.github/workflows/ci.yml` calls `standards.yml` in `nathanzm/.github` at `@main`, so this repo pins no actions. It detects the languages here and runs a gitleaks secret scan, the vendor-file ban, dependency review (on public PRs), actionlint, and each language's checks above. Code in a language with no gate fails CI until `nathanzm/.github` gets one. `standards / result` is the only required check. A repo with pinned dependencies adds `.github/dependabot.yml` for its package ecosystem, with a 7-day cooldown.
 
 ## Contributing
 - Branch from `main` and open a PR. PRs are squash-merged, and the branch is deleted on merge.

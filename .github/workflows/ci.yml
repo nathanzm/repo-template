@@ -1,8 +1,6 @@
-# CI: the required checks for main. The baseline gates run in every repo; add
-# one job per language from nathanzm/.github (see its README), for example:
-#   python:
-#     uses: nathanzm/.github/.github/workflows/python.yml@main
-# Shared workflows come from nathanzm/.github at @main; that repo holds the pins.
+# CI: the required checks for main. standards.yml in nathanzm/.github detects
+# the languages here and runs each one's gates; only `standards / result` is
+# required. It runs at @main; that repo holds the pins.
 name: ci
 
 on:
@@ -15,5 +13,7 @@ permissions:
   contents: read
 
 jobs:
-  baseline:
-    uses: nathanzm/.github/.github/workflows/baseline.yml@main
+  standards:
+    uses: nathanzm/.github/.github/workflows/standards.yml@main
+    # with:
+    #   exclude: vendor/   # path prefixes detection ignores (vendored code)
