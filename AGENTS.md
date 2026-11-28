@@ -17,10 +17,10 @@ Keep these current in the same change as the code. Write them in the present ten
 
 ## Develop
 ```sh
-# TODO: the commands to set up, format, lint, type check and test,
-# exactly as CI runs them.
+# <The commands to set up, format, lint, type check and test,
+#  exactly as CI runs them.>
 ```
-- Layout: TODO: where code and tests live. Tests that use real external dependencies are marked as integration tests.
+- Layout: `<where code and tests live>`. Tests that use real external dependencies are marked as integration tests.
 - **Coverage is 100% line and branch.** Exclude a line only with an inline comment giving the reason. Never lower the floor.
 - Code style: the language's idiomatic style, enforced by its formatter and linter with warnings as errors; every function and type has a doc comment; diagnostics go through the language's standard logger, never bare prints. Text files use LF line endings.
 
